@@ -1,91 +1,233 @@
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url("assets/fonts/HankenGrotesk-VariableFont_wght.ttf")
+    format("truetype"); /* Use the absolute path to the font file */
+  font-weight: 100 900;
+  /* You can also specify font-weight and font-style here if necessary */
+}
+
 body {
-  background-color: lightgray;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
   height: 100vh;
-  margin: 0;
+  width: 100vw;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 
 .container {
   display: flex;
-
-  width: 40%;
-  background-color: white;
+  border-style: none;
+  max-width: fit-content;
+  border-radius: 20px;
+  box-shadow: 3px 3px 30px rgba(173, 216, 230, 0.91);
 }
 
 .result {
-  flex: 1;
-  width: 20%;
-  padding: 20px;
-  background-color: hsl(234, 85%, 45%);
-  border: 2px solid #2980b9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 220px;
+  align-items: center;
+  padding: 30px;
+  background-image: linear-gradient(#6f41fd, #4f39f4, #342eea);
   color: white;
-  text-align: center;
-  border-radius: 10px;
-  position: relative;
-  margin-right: 0;
+  border-radius: 25px;
+  max-width: 300px;
+}
+
+.grey-text {
+  color: #cabbff;
+  font-weight: 600;
 }
 
 .summary {
-  flex: 1;
-  width: 20%;
-  padding: 20px;
-  background-color: white;
-  border: 2px solid #ccc;
-  text-align: center;
-  height: 300px;
-  border-radius: 0;
-  margin-left: 20px;
-  margin-left: 0;
-}
-
-.score {
-  background-color: #29648a;
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  margin: 0 auto;
   display: flex;
+  flex-direction: column;
+  justify-content: left;
+  width: 190px;
+  padding: 50px 80px 50px 30px;
+  background-color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  color: rgb(5, 3, 62);
+  border-radius: 25px;
+  max-width: 300px;
+}
+
+.summary-grid {
+  display: grid;
+  grid-column: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #c0affd;
+}
+
+.grid-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
   align-items: center;
-  justify-content: center;
-  flex-direction: column; /* Stack items vertically */
-}
-
-.score-number {
-  font-size: 24px; /* Increase the font size for the number */
-}
-
-.max-score {
-  font-size: 16px; /* Adjust font size for the "of 100" text */
-}
-
-ul {
-  list-style: none;
-}
-
-li {
+  width: 220px;
+  height: 45px;
+  border-radius: 10px;
+  background-color: rgb(243, 192, 192);
   margin-bottom: 10px;
 }
 
-.skills {
+/* Red style */
+.grid-items.red {
+  background-color: #fff6f5; /* Light red background */
+  color: #d86c76; /* Bright red text */
+}
+
+/* Yellow style */
+.grid-items.yellow {
+  background-color: #fffbf2; /* Light yellow background */
+  color: #ffd271; /* Bright yellow text */
+}
+
+/* Green style */
+.grid-items.green {
+  background-color: #f2fbfa; /* Light green background */
+  color: #33a88b; /* Bright green text */
+}
+
+/* Blue style */
+.grid-items.blue {
+  background-color: #f3f3fd; /* Light blue background */
+  color: #2d37aa; /* Bright blue text */
+}
+
+h5 {
+  margin-left: 10px;
+}
+
+.right-text {
+  color: #97949d;
+  font-size: 13px;
+  font-weight: 600;
+  font-weight: bold;
+}
+
+span {
+  color: #4f5364;
+  font-size: 14px;
+  font-weight: bolder;
+}
+
+span#after {
+  color: lightgray;
+}
+
+.grid-items-left {
   display: flex;
-  justify-content: space-between;
-  padding: 10px 10px;
 }
 
-.red.skills {
-  background-color: rgba(255, 99, 71, 0.2); /* Lighter red */
+.circle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  background-image: linear-gradient(to bottom, #4b24cd, #452ee1, #4633ef);
+  width: 90px;
+  height: 90px;
+  padding: 25px;
+  border-radius: 100%;
+  text-align: center;
 }
 
-.yellow.skills {
-  background-color: rgba(255, 255, 0, 0.2); /* Lighter yellow */
+h1 {
+  margin: 0px;
+  margin-top: 0px;
+  padding: 0px;
+  font-weight: bold;
+  font-size: 50px;
+}
+p {
+  margin: 0px;
+  font-size: 12px;
+  text-align: center;
+  max-width: 160px;
+  color: rgb(218, 216, 216);
 }
 
-.green.skills {
-  background-color: rgba(144, 238, 144, 0.2); /* Lighter green */
+button {
+  color: white;
+  font-weight: 600;
+  width: 15rem;
+  background-color: #303b59;
+  border-radius: 20px;
+  padding: 13px;
+  border-style: none;
+  cursor: pointer;
+}
+button:active {
+  background-color: #4434ef;
 }
 
-.blue.skills {
-  background-color: rgba(173, 216, 230, 0.2); /* Lighter blue */
+@media (max-width: 768px) {
+  body {
+    /* Adjust the body styles for mobile */
+    display: flex;
+    flex-direction: column; /* Change flex to block for stacking elements */
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .grey-text {
+    font-size: 15px;
+  }
+  .container {
+    /* Adjust container styles for mobile */
+    display: flex;
+    flex-direction: column; /* Change flex to block for stacking elements */
+    margin-bottom: 15px;
+    border-style: none;
+    justify-content: center;
+    align-items: center;
+    box-shadow: none;
+  }
+
+  /* Add more mobile-specific styles as needed */
+
+  .Blue-left {
+    /* Adjust styles for the Blue and White boxes */
+    width: 100vw;
+    height: 40vh; /* Make them full-width on mobile */
+    max-width: none; /* Remove max-width restriction */
+    text-align: center; /* Center-align text */
+    padding: 20px; /* Adjust padding for better spacing on mobile */
+    border-radius: 0 0 60px 60px;
+  }
+  .White-right {
+    width: 100vw;
+    height: 45vh;
+    padding: 25px 50px 50px 40px;
+  }
+
+  .grid-items {
+    /* Adjust styles for grid items on mobile */
+    width: 100%; /* Make them full-width on mobile */
+    height: auto;
+    margin-bottom: 15px;
+    max-width: none; /* Remove max-width restriction */
+  }
+
+  button {
+    width: 20rem;
+    padding: 15px;
+  }
+
+  p {
+    max-width: 200px;
+    font-size: 12px;
+  }
+
+  .attribution {
+    display: none;
+  }
 }
