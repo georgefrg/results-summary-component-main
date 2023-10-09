@@ -1,0 +1,91 @@
+body {
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+
+  width: 40%;
+  background-color: white;
+}
+
+.result {
+  flex: 1;
+  width: 20%;
+  padding: 20px;
+  background-color: hsl(234, 85%, 45%);
+  border: 2px solid #2980b9;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+  margin-right: 0;
+}
+
+.summary {
+  flex: 1;
+  width: 20%;
+  padding: 20px;
+  background-color: white;
+  border: 2px solid #ccc;
+  text-align: center;
+  height: 300px;
+  border-radius: 0;
+  margin-left: 20px;
+  margin-left: 0;
+}
+
+.score {
+  background-color: #29648a;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* Stack items vertically */
+}
+
+.score-number {
+  font-size: 24px; /* Increase the font size for the number */
+}
+
+.max-score {
+  font-size: 16px; /* Adjust font size for the "of 100" text */
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.skills {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px;
+}
+
+.red.skills {
+  background-color: rgba(255, 99, 71, 0.2); /* Lighter red */
+}
+
+.yellow.skills {
+  background-color: rgba(255, 255, 0, 0.2); /* Lighter yellow */
+}
+
+.green.skills {
+  background-color: rgba(144, 238, 144, 0.2); /* Lighter green */
+}
+
+.blue.skills {
+  background-color: rgba(173, 216, 230, 0.2); /* Lighter blue */
+}
